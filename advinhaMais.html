@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+
+<input type="number" name="advinhacao">
+<button>Compare com os meus segredos</button>
+
+<script type="text/javascript">
+
+	var botao = document.querySelector(`button`);
+	var campo = document.querySelector(`input`);
+	var maxNumeros = parseInt(prompt(`Quantos números deseja advinhar?`));
+
+	function sorteio(dificuldade) {
+		var maxLength = dificuldade;  
+		var sorteio, copiaSorteio = []; 
+
+		for (var i = 0; i < maxLength; i++) {
+			copiaSorteio, sorteio[i] = Math.round(Math.random() * 10);
+
+			if (i > 1) { // se Sorteio tiver mais que 0 números 
+				for (var i2 = 0; i2 != i; i2++) { // para i2 diferente da sorteio.length
+					while (sorteio[i] == copiaSorteio[verificador]) {
+						sorteio[i] = Math.round(Math.random() * 10);
+					}
+				}
+
+				// enquanto o verificador for diferente de i
+				// o verificador vai pegar o valor de testador e comparar com o número anterior
+				// se for igual o número é alterado por outro aleatório
+			} 
+		}
+
+		console.log(sorteio);
+		return sorteio;
+	}	
+
+	var segredos = [];
+	segredos.push(sorteio(maxNumeros));
+
+	function verifica() { 
+		var acerto = false; 
+
+		for (var i = 0; i < segredos.length; i++) {
+			if (campo.value == segredos[i]) {
+				acerto = true;
+				alert(`Parabéns, você acertou!`);
+				break;
+			}
+		}
+
+		if (acerto == false) {
+			alert(`Parabéns, você não acertou nenhuma :D`);
+		}
+
+		campo.value = ``;
+		botao.focus();
+	}
+
+	botao.onclick = verifica; 
+</script>

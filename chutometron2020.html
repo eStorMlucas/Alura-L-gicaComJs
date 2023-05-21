@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+		
+		function pulaLinha() {
+			document.write("<br><br>");
+
+		}
+
+		function mostra(texto) {
+			document.write(texto);
+		
+		}
+
+		function sorteia() {
+			return Math.round(Math.random() * 10);
+		}
+
+		var numPensado = sorteia();
+		var chute = parseInt(prompt("Digite o seu chute."));
+		var tentativas = 1;
+
+		while (tentativas <= 3) {
+			if (chute == numPensado) {
+				alert(`Parabéns, você acertou!`);
+				break;
+			} else  {
+				if(tentativas == 3) {
+					alert(`Infelizmente você errou, o número pensado era ${numPensado}`);
+					break;
+				} else {
+					alert(`Infelizmente você errou.`); 
+				}
+			} 
+			chute = parseInt(prompt("Digite o seu chute."));
+
+			tentativas++;
+		}
+
+</script>

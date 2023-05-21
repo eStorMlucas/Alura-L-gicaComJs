@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	
+	function pulaLinha() {
+		document.write('<br><br>')
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+	}
+
+	var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+	var empates = parseInt(prompt("Entre com o número de empates."))
+
+	var pontos = vitorias * 3 + empates;
+
+	if (pontos > 28) {
+		mostra(`O total de pontos do seu time é ${pontos}, o seu time está melhor que no ano passado.`);
+	} else {
+		if (pontos < 28) {
+			mostra(`O total de pontos do seu time é ${pontos}, ele se encontra pior do que no ano passado.`)
+		} else {
+			mostra(`O seu time possui ${pontos}, ele continua com a pontuação igual a do ano passado.`)
+		}
+	}
+
+</script>

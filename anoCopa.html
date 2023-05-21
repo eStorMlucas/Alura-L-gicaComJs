@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+		
+		function pulaLinha() {
+			document.write("<br><br>");
+
+		}
+
+		function mostra(texto) {
+			document.write(texto);
+			pulaLinha();		
+		}
+
+		var anoCopa = 1930;
+		var limite = parseInt(prompt("Defina o ano limite"));
+
+		while (anoCopa < limite) {
+			mostra(`Teve copa do mundo no ano de ${anoCopa}.`);
+			anoCopa += 4; 
+		}
+</script>
