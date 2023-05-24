@@ -1,13 +1,13 @@
 # Logica Com Js
-Course provided by **Alura** with **Flavio Henrique** as a instructor: 
+Course provided by **Alura** with **Flavio Henrique** as an instructor: 
 <a href="https://cursos.alura.com.br/course/logica-programacao-javascript-html" target="_blank"> You can access here </a>
 
 # Course Concept
 
-That's a course for true begginer's in programming world
+That's a course for true begginers in the programming world.
 
 # Major Knowledges
 
-- Programming Logic
+- Logic of Programming
 - JavaScript Syntax
-- JavaScript Basic's 
+- JavaScript Basics 
